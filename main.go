@@ -14,7 +14,7 @@ import (
 )
 
 func echoHandler(w http.ResponseWriter, r *http.Request) {
-	message := "Pong. You hit me with a %v request\n" + html.EscapeString(r.Method)
+	message := "Pong. You hit me with a request of type: " + html.EscapeString(r.Method) + "\n"
 
 	w.Write([]byte(message))
 }
